@@ -23,23 +23,23 @@ int main()
         {
             printf("Next day: %i/%i%i\n", day + 1, mon, yer);
         }
-        else if (mon < 8 && mon % 2 != 0 && day = 31)
+        else if (mon < 8 && mon % 2 != 0 && day == 31)
         {
             printf("Next day: %i/%i%i\n", 1, mon + 1, yer);
         }
-        else if (mon < 8 && mon % 2 = 0 && day < 30)
+        else if (mon < 8 && mon % 2 == 0 && day < 30)
         {
             printf("Next day: %i/%i%i\n", day + 1, mon, yer);
         }
-        else if (mon < 8 && mon % 2 = 0 && day = 30)
+        else if (mon < 8 && mon % 2 == 0 && day == 30)
         {
             printf("Next day: %i/%i%i\n", 1, mon + 1, yer);
         }
-        else if (mon > 7 && mon % 2 = 0 && day < 31 && mon != 12)
+        else if (mon > 7 && mon % 2 == 0 && day < 31 && mon != 12)
         {
             printf("Next day: %i/%i%i\n", day + 1, mon, yer);
         }
-        else if (mon > 7 && mon % 2 = 0 && day = 31 && mon != 12)
+        else if (mon > 7 && mon % 2 == 0 && day == 31 && mon != 12)
         {
             printf("Next day: %i/%i%i\n", 1, mon + 1, yer);
         }
@@ -47,10 +47,24 @@ int main()
         {
             printf("Next day: %i/%i%i\n", day + 1, mon, yer);
         }
-        else if (mon > 7 && mon % 2 != 0 && day = 30 && mon != 12)
+        else if (mon > 7 && mon % 2 != 0 && day == 30 && mon != 12)
         {
             printf("Next day: %i/%i%i\n", 1, mon + 1, yer);
         }
+        else if (mon == 12 && day < 31)
+        {
+            printf("Next day: %i/%i/%i\n", day + 1, mon, yer);
+        }
+        else if (mon == 12 && day == 31)
+        {
+            printf("Next day: %i/%i/%i\n", 1, 1, yer + 1);
+        }
+        else
+        {
+            printf("Output: Invalid Date\n");
+            return 1;
+        }
+        return 0;
     }
     else 
     {
