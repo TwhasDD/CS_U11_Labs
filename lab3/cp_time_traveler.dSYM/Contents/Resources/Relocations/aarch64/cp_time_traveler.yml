@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/tejas/Downloads/CS_U11_Labs/lab3/cp_time_traveler'
+relocations:     []
+...
